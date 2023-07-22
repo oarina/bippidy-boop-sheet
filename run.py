@@ -60,7 +60,36 @@ bippidy = SHEET.worksheet('bippidy')
 # bippidy is actually a first tab in the linked sheet: 
 # https://docs.google.com/spreadsheets/d/1SB1IVrH-dtkq-SUiHCtJOxlckCZPszbmLZ-SuvRS6V4/edit#gid=0
 
-# --------------------------2---------------------SECTION THAT WORKS WITH LIKED TATA
+# --------------------------2---------------------SECTION THAT WORKS WITH LINKED TATA
 
-data = bippidy.get_all_values() #we calling all data
+def characters_background_fill():
+
+'''
+function to fill the space in the terminal that is 24 characters long and 80 characters wide
+
+Reason: want to see how it would look like.
+'''
+    characters ="*" 
+    rows = 24 // len(characters)
+    columns = 80
+
+    for i in range(rows):
+        print(characters * columns)
+
+characters_background_fill()
+
+'''
+def print_I_in_columns():
+    characters = "/"
+    rows = 24 // len(characters)  # Calculate how many "I" characters fit in each row
+    columns = 80
+
+    for i in range(rows):
+        print(characters * columns)
+
+# Example usage:
+print_I_in_columns()
+'''
+
+data = bippidy.get_all_values() # we calling all data from the sheet
 print(data) # printing all data
