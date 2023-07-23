@@ -90,6 +90,16 @@ def print_I_in_columns():
 # Example usage:
 print_I_in_columns()
 '''
+# attempt at getting a user name . did not work so far
+def get_user_name(prompt):
+    return input(prompt)
+
+def greet_user(user_name):
+    print(f"Sup {user_name}. Welcome aboard!")
+
+print("Hello there ✋🏻! What is your name?")
+user_name = get_user_name("")
+greet_user(user_name)
 
 data = bippidy.get_all_values() # we calling all data from the sheet
 print(data) # printing all data
